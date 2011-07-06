@@ -1,0 +1,104 @@
+<?php
+
+/**
+ * @file
+ * Insert blocks into the body of a node
+ *
+ * Sidebar blocks contain all sorts of nifty stuff, but sometimes you
+ * want to stick that stuff into the body of your node. Instead of using
+ * PHP snippets (a possible security hole on public sites), you can use
+ * this module. When it's activated...
+ *
+ * [block:name of module=delta of block]
+ *
+ * ...will insert the contents of a rendered sidebar block into the body
+ * of your node. If no delta is specified, the default block for that
+ * module will be displayed.
+ */
+
+/**
+ * Implementation of hook_help().
+ */
+function insert_block_help($section = 'admin/help#insert_block', $args = array()) {
+  $output = '';
+  switch ($section) {
+    case 'admin/help#insert_block':
+      return t('<p>Use special tags to insert the contents of a block into a node.</p><p>You may use [block:<em>module</em>=<em>delta</em>] tags in the body of a node or anywhere that Drupal\'s filter system runs to display the contents of block <em>delta</em> for module <em>module</em>.</p><p>To discover module names and deltas, visit admin/build/block and hover over a block\'s configure link and look in your browser\'s status bar. The last "word" you see is the name of the module and the number following that is the delta. If you leave off the delta in an Insert Block tag, the default delta will be used.</p>');
+  }
+}
+
+/**
+ * Implementation of hook_filter_info().
+ */
+function insert_block_filter_info() {
+  $filters['insert_block'] = array(
+    'title' => t('Insert blocks'),
+    'description' => t('Inserts the contents of a block into a node using [block:module=delta] tags.'),
+    'process callback' => '_insert_block',
+    'settings callback' => '_insert_block_settings',
+    'tips callback' => '_insert_block_tips',
+    'cache' => FALSE,
+  );
+  return $filters;
+}
+
+function _insert_block($text, $filter, $format) {
+  if (preg_match_all("/\[block:([^=\\]]+)=?([^\\]]*)?\]/i", $text, $match)) {
+    foreach ($match[2] as $key => $value) {
+      $raw_tags[] = $match[0][$key];
+      $module = $match[1][$key];
+      $delta = $match[2][$key];
+
+      $block = module_invoke($module, 'block_view', $delta);
+
+      $repl[] = theme('insert_block_block', array('block' => $block));
+    }
+    return str_replace($raw_tags, $repl, $text);
+  }
+  return $text;
+}
+
+function _insert_block_settings($format) {
+  
+}
+
+function _insert_block_tips($filter, $format, $long = FALSE) {
+  if ($long) {
+    return t('<a name="filter-insert_block"></a>You may use [block:<em>module</em>=<em>delta</em>] tags to display the contents of block <em>delta</em> for module <em>module</em>. To discover module names and deltas, visit admin/build/block and hover over a block\'s configure link and look in your browser\'s status bar. The last "word" you see is the name of the module and the number following that is the delta. If you leave off the delta in an Insert Block tag, the default delta will be used.');
+  }
+  else {
+    return t('You may use <a href="@insert_block_help">[block:<em>module</em>=<em>delta</em>] tags</a> to display the contents of block <em>delta</em> for module <em>module</em>.',
+    array("@insert_block_help" => url("filter/tips/$format->format", array('fragment' => 'filter-insert_block'))));
+  }
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+function insert_block_theme() {
+  $themes = array(
+    'insert_block_block' => array(
+      'variables' => array('block' => NULL),
+    ),
+  );
+  return $themes;
+}
+
+/**
+ * Format an included block.
+ *
+ * Gets passed the block array to be formatted. By default it includes
+ * the block subject, if any, and the block's content.
+ *
+ * @ingroup themeable
+ */
+function theme_insert_block_block($vars) {
+  $content = '';
+  if (!empty($vars['block']['subject'])) {
+    $content .= '<h2>'. $vars['block']['subject'] .'</h2>';
+  }
+  if (!empty($vars['block']['content'])) {
+    $content .= $vars['block']['content'];
+  }
+  return $content;
+}

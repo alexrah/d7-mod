@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+.heartbeat-group-left {
+  width: 50px;
+  float: left;
+  margin-right: 3px;
+}
+
+.heartbeat-group-content {
+  float: left;
+  width: auto;
+  float: left;
+  color: #808080;
+}
+
+.heartbeat-group-content .group-footer {
+  margin: 6px 0;
+}

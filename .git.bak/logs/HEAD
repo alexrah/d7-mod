@@ -1,0 +1,73 @@
+0000000000000000000000000000000000000000 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309678462 +0200	commit (initial): Start before any patch
+8ca157452273878a77591ac3ebe9746adfa964d6 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309678759 +0200	checkout: moving from master to imagefield
+8ca157452273878a77591ac3ebe9746adfa964d6 5b6e8fc3a87a4bb2ce477a38016fa7124778124d ale <ale@MacPro.local> 1309681875 +0200	commit: Patched image field
+5b6e8fc3a87a4bb2ce477a38016fa7124778124d a1a4e90b934a440d5ceb16724cc9af340e1607e9 ale <ale@MacPro.local> 1309682067 +0200	commit: Added backup files and patch backup
+a1a4e90b934a440d5ceb16724cc9af340e1607e9 1bd3bfc84c14861a774a3cf6f9d90b98436ddc4b ale <ale@MacPro.local> 1309682130 +0200	commit (amend): Added backup files and patch backup
+1bd3bfc84c14861a774a3cf6f9d90b98436ddc4b 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309829831 +0200	checkout: moving from imagefield to master
+8ca157452273878a77591ac3ebe9746adfa964d6 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309829878 +0200	checkout: moving from master to 73
+8ca157452273878a77591ac3ebe9746adfa964d6 a74b1151e71ec67b41cfa80815667c5df01427eb System Administrator <root@MacPro.local> 1309832723 +0200	commit: On branch 73
+a74b1151e71ec67b41cfa80815667c5df01427eb 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309832845 +0200	checkout: moving from 73 to master
+8ca157452273878a77591ac3ebe9746adfa964d6 a74b1151e71ec67b41cfa80815667c5df01427eb ale <ale@MacPro.local> 1309834625 +0200	checkout: moving from master to 73
+a74b1151e71ec67b41cfa80815667c5df01427eb a74b1151e71ec67b41cfa80815667c5df01427eb System Administrator <root@MacPro.local> 1309834651 +0200	checkout: moving from 73 to 73
+a74b1151e71ec67b41cfa80815667c5df01427eb 8ca157452273878a77591ac3ebe9746adfa964d6 System Administrator <root@MacPro.local> 1309834948 +0200	ORIG_HEAD: updating HEAD
+8ca157452273878a77591ac3ebe9746adfa964d6 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309835130 +0200	checkout: moving from 73 to base
+8ca157452273878a77591ac3ebe9746adfa964d6 90519074495e8b087f53660aebb5739025069721 ale <ale@MacPro.local> 1309835257 +0200	commit: On branch base
+90519074495e8b087f53660aebb5739025069721 90519074495e8b087f53660aebb5739025069721 ale <ale@MacPro.local> 1309835423 +0200	checkout: moving from base to update
+90519074495e8b087f53660aebb5739025069721 b112294cebafe0bee97ae15096fb78b0fec496f6 ale <ale@MacPro.local> 1309835476 +0200	commit: On branch update
+b112294cebafe0bee97ae15096fb78b0fec496f6 90519074495e8b087f53660aebb5739025069721 ale <ale@MacPro.local> 1309835525 +0200	checkout: moving from update to base
+90519074495e8b087f53660aebb5739025069721 1ac4b6fc8a0bcc5b9bc0af9a79aa0a94715689d4 ale <ale@MacPro.local> 1309835552 +0200	commit: On branch base
+1ac4b6fc8a0bcc5b9bc0af9a79aa0a94715689d4 b112294cebafe0bee97ae15096fb78b0fec496f6 ale <ale@MacPro.local> 1309835594 +0200	checkout: moving from base to update
+b112294cebafe0bee97ae15096fb78b0fec496f6 fabca908c327bc3ec5e68afaad042424b708075c ale <ale@MacPro.local> 1309835931 +0200	commit: On branch update
+fabca908c327bc3ec5e68afaad042424b708075c 1ac4b6fc8a0bcc5b9bc0af9a79aa0a94715689d4 ale <ale@MacPro.local> 1309836189 +0200	checkout: moving from update to base
+1ac4b6fc8a0bcc5b9bc0af9a79aa0a94715689d4 303669a6781680f9be01cd7e155ab3a4e63a07b0 ale <ale@MacPro.local> 1309837131 +0200	merge b112294cebafe0bee97ae15096fb78b0fec496f6: Merge made by recursive.
+303669a6781680f9be01cd7e155ab3a4e63a07b0 303669a6781680f9be01cd7e155ab3a4e63a07b0 ale <ale@MacPro.local> 1309837178 +0200	checkout: moving from base to 303669a6781680f9be01cd7e155ab3a4e63a07b0
+303669a6781680f9be01cd7e155ab3a4e63a07b0 303669a6781680f9be01cd7e155ab3a4e63a07b0 ale <ale@MacPro.local> 1309837201 +0200	checkout: moving from 303669a6781680f9be01cd7e155ab3a4e63a07b0 to base
+303669a6781680f9be01cd7e155ab3a4e63a07b0 fabca908c327bc3ec5e68afaad042424b708075c ale <ale@MacPro.local> 1309843687 +0200	checkout: moving from base to update
+fabca908c327bc3ec5e68afaad042424b708075c a58c391449ef2dc1bfe59a0131485987c82dc349 ale <ale@MacPro.local> 1309843772 +0200	commit: UPDATE TO 7.4
+a58c391449ef2dc1bfe59a0131485987c82dc349 8531271399426f992231afdac4c9ec8b61027e59 ale <ale@MacPro.local> 1309843890 +0200	commit: ADDED NEW FILES
+8531271399426f992231afdac4c9ec8b61027e59 303669a6781680f9be01cd7e155ab3a4e63a07b0 ale <ale@MacPro.local> 1309843999 +0200	checkout: moving from update to base
+303669a6781680f9be01cd7e155ab3a4e63a07b0 303669a6781680f9be01cd7e155ab3a4e63a07b0 System Administrator <root@MacPro.local> 1309844017 +0200	checkout: moving from base to base
+303669a6781680f9be01cd7e155ab3a4e63a07b0 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309844123 +0200	checkout: moving from base to master
+8ca157452273878a77591ac3ebe9746adfa964d6 fabca908c327bc3ec5e68afaad042424b708075c ale <ale@MacPro.local> 1309844910 +0200	checkout: moving from master to test
+fabca908c327bc3ec5e68afaad042424b708075c 69f9441d45f899273c689da4aef81b8009598369 ale <ale@MacPro.local> 1309845055 +0200	commit: back to 7.4?
+69f9441d45f899273c689da4aef81b8009598369 fabca908c327bc3ec5e68afaad042424b708075c ale <ale@MacPro.local> 1309845319 +0200	checkout: moving from test to popo
+fabca908c327bc3ec5e68afaad042424b708075c 6dca68a9c5fb26a65bc94ed07e77496caff4fcc2 ale <ale@MacPro.local> 1309845401 +0200	commit: popo branch si
+6dca68a9c5fb26a65bc94ed07e77496caff4fcc2 fabca908c327bc3ec5e68afaad042424b708075c System Administrator <root@MacPro.local> 1309845509 +0200	checkout: moving from popo to pipi
+fabca908c327bc3ec5e68afaad042424b708075c 6dca68a9c5fb26a65bc94ed07e77496caff4fcc2 System Administrator <root@MacPro.local> 1309845529 +0200	checkout: moving from pipi to popo
+6dca68a9c5fb26a65bc94ed07e77496caff4fcc2 90519074495e8b087f53660aebb5739025069721 System Administrator <root@MacPro.local> 1309845602 +0200	HEAD~3: updating HEAD
+90519074495e8b087f53660aebb5739025069721 8ca157452273878a77591ac3ebe9746adfa964d6 System Administrator <root@MacPro.local> 1309845662 +0200	checkout: moving from popo to master
+8ca157452273878a77591ac3ebe9746adfa964d6 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309846823 +0200	checkout: moving from master to 8ca157452273878a77591ac3ebe9746adfa964d6
+8ca157452273878a77591ac3ebe9746adfa964d6 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309846885 +0200	checkout: moving from master to 8ca157452273878a77591ac3ebe9746adfa964d6
+8ca157452273878a77591ac3ebe9746adfa964d6 a58c391449ef2dc1bfe59a0131485987c82dc349 ale <ale@MacPro.local> 1309848864 +0200	checkout: moving from master to a58c391449ef2dc1bfe59a0131485987c82dc349
+a58c391449ef2dc1bfe59a0131485987c82dc349 1bd3bfc84c14861a774a3cf6f9d90b98436ddc4b ale <ale@MacPro.local> 1309849211 +0200	checkout: moving from a58c391449ef2dc1bfe59a0131485987c82dc349 to imagefield
+1bd3bfc84c14861a774a3cf6f9d90b98436ddc4b 8ca157452273878a77591ac3ebe9746adfa964d6 System Administrator <root@MacPro.local> 1309849353 +0200	checkout: moving from imagefield to master
+8ca157452273878a77591ac3ebe9746adfa964d6 a58c391449ef2dc1bfe59a0131485987c82dc349 ale <ale@MacPro.local> 1309849667 +0200	merge 7.2: Fast-forward
+a58c391449ef2dc1bfe59a0131485987c82dc349 90519074495e8b087f53660aebb5739025069721 ale <ale@MacPro.local> 1309849848 +0200	HEAD~3: updating HEAD
+90519074495e8b087f53660aebb5739025069721 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309849860 +0200	HEAD~1: updating HEAD
+8ca157452273878a77591ac3ebe9746adfa964d6 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309849970 +0200	checkout: moving from master to tail
+8ca157452273878a77591ac3ebe9746adfa964d6 f291adb71940f4c21a8d00224f6e48bdd0247914 ale <ale@MacPro.local> 1309849995 +0200	commit: On branch tail
+f291adb71940f4c21a8d00224f6e48bdd0247914 f291adb71940f4c21a8d00224f6e48bdd0247914 ale <ale@MacPro.local> 1309850127 +0200	checkout: moving from tail to f291adb71940f4c21a8d00224f6e48bdd0247914
+f291adb71940f4c21a8d00224f6e48bdd0247914 a58c391449ef2dc1bfe59a0131485987c82dc349 ale <ale@MacPro.local> 1309850210 +0200	checkout: moving from tail to a58c391449ef2dc1bfe59a0131485987c82dc349
+a58c391449ef2dc1bfe59a0131485987c82dc349 c3a2d763d0c2ca5b33bbd2a57ad2e61c92877136 ale <ale@MacPro.local> 1309850210 +0200	rebase -i (pick): On branch tail
+c3a2d763d0c2ca5b33bbd2a57ad2e61c92877136 c3a2d763d0c2ca5b33bbd2a57ad2e61c92877136 ale <ale@MacPro.local> 1309850246 +0200	checkout: moving from tail to c3a2d76
+c3a2d763d0c2ca5b33bbd2a57ad2e61c92877136 90519074495e8b087f53660aebb5739025069721 ale <ale@MacPro.local> 1309850367 +0200	checkout: moving from tail to 90519074495e8b087f53660aebb5739025069721
+c3a2d763d0c2ca5b33bbd2a57ad2e61c92877136 b112294cebafe0bee97ae15096fb78b0fec496f6 ale <ale@MacPro.local> 1309850408 +0200	checkout: moving from tail to b112294
+b112294cebafe0bee97ae15096fb78b0fec496f6 90519074495e8b087f53660aebb5739025069721 ale <ale@MacPro.local> 1309850408 +0200	rebase -i (squash): updating HEAD
+c3a2d763d0c2ca5b33bbd2a57ad2e61c92877136 c3a2d763d0c2ca5b33bbd2a57ad2e61c92877136 ale <ale@MacPro.local> 1309850438 +0200	checkout: moving from tail to c3a2d76
+c3a2d763d0c2ca5b33bbd2a57ad2e61c92877136 b112294cebafe0bee97ae15096fb78b0fec496f6 System Administrator <root@MacPro.local> 1309850477 +0200	checkout: moving from tail to b112294
+b112294cebafe0bee97ae15096fb78b0fec496f6 90519074495e8b087f53660aebb5739025069721 System Administrator <root@MacPro.local> 1309850477 +0200	rebase -i (squash): updating HEAD
+90519074495e8b087f53660aebb5739025069721 2eab57a76a4a04ef02d5adb02f48d0dd4636ab2c System Administrator <root@MacPro.local> 1309850478 +0200	rebase -i (squash): # This is a combination of 2 commits.
+2eab57a76a4a04ef02d5adb02f48d0dd4636ab2c 90519074495e8b087f53660aebb5739025069721 System Administrator <root@MacPro.local> 1309850478 +0200	rebase -i (squash): updating HEAD
+90519074495e8b087f53660aebb5739025069721 d56cb449b31793b7dd6a5bc91a5ecc79e98b3878 System Administrator <root@MacPro.local> 1309850478 +0200	rebase -i (squash): This is a combination of 3 commits.
+d56cb449b31793b7dd6a5bc91a5ecc79e98b3878 c16a52aa3498fc01275e149aac09c70d6541dbd0 System Administrator <root@MacPro.local> 1309850529 +0200	rebase -i (pick): On branch tail
+c16a52aa3498fc01275e149aac09c70d6541dbd0 90519074495e8b087f53660aebb5739025069721 System Administrator <root@MacPro.local> 1309850638 +0200	checkout: moving from tail to 9051907
+90519074495e8b087f53660aebb5739025069721 8ca157452273878a77591ac3ebe9746adfa964d6 System Administrator <root@MacPro.local> 1309850638 +0200	rebase -i (squash): updating HEAD
+8ca157452273878a77591ac3ebe9746adfa964d6 28f659c78cf243793213ae8e80a95baffdf3abe8 System Administrator <root@MacPro.local> 1309850638 +0200	rebase -i (squash): This is a combination of 2 commits.
+28f659c78cf243793213ae8e80a95baffdf3abe8 7e9fb068b6c48140c6c56bf66272a755a910b5d7 System Administrator <root@MacPro.local> 1309850656 +0200	rebase -i (pick): On branch tail
+7e9fb068b6c48140c6c56bf66272a755a910b5d7 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309850714 +0200	checkout: moving from tail to master
+8ca157452273878a77591ac3ebe9746adfa964d6 fabca908c327bc3ec5e68afaad042424b708075c ale <ale@MacPro.local> 1309852462 +0200	checkout: moving from master to fabca908c327bc3ec5e68afaad042424b708075c
+fabca908c327bc3ec5e68afaad042424b708075c 7e9fb068b6c48140c6c56bf66272a755a910b5d7 ale <ale@MacPro.local> 1309910221 +0200	checkout: moving from fabca908c327bc3ec5e68afaad042424b708075c to tail
+7e9fb068b6c48140c6c56bf66272a755a910b5d7 28f659c78cf243793213ae8e80a95baffdf3abe8 ale <ale@MacPro.local> 1309910342 +0200	checkout: moving from tail to 28f659c
+28f659c78cf243793213ae8e80a95baffdf3abe8 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309910342 +0200	rebase -i (squash): updating HEAD
+8ca157452273878a77591ac3ebe9746adfa964d6 df800af4af444e6a0d052adcc71cb64eb0521a28 ale <ale@MacPro.local> 1309910342 +0200	rebase -i (squash): This is a combination of 2 commits.
+df800af4af444e6a0d052adcc71cb64eb0521a28 8ca157452273878a77591ac3ebe9746adfa964d6 System Administrator <root@MacPro.local> 1309910406 +0200	checkout: moving from tail to master

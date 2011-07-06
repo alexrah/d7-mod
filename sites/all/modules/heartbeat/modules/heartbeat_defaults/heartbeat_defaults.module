@@ -1,0 +1,266 @@
+<?php
+
+/**
+ * @file
+ * Heartbeat defaults module file
+ *
+ * This file contains default streams and message templates.
+ */
+
+/**
+ * Implements hook_heartbeat_stream_info().
+ */
+function heartbeat_defaults_heartbeat_stream_info() {
+
+  $heartbeatstreams = array();
+
+  $heartbeatstream = new HeartbeatStreamConfig;
+  $heartbeatstream->disabled = FALSE; /* Edit this to true to make a default heartbeatstream disabled initially */
+  $heartbeatstream->api_version = 1;
+  $heartbeatstream->class = 'useractivity';
+  $heartbeatstream->name = 'User activity';
+  $heartbeatstream->module = 'heartbeat_defaults';
+  $heartbeatstream->title = 'User activity';
+  $heartbeatstream->path = 'streams/useractivity.inc';
+  $heartbeatstream->settings = '';
+  $heartbeatstream->variables = array();
+  $heartbeatstreams['useractivity'] = $heartbeatstream;
+
+  $heartbeatstream = new HeartbeatStreamConfig;
+  $heartbeatstream->disabled = FALSE; /* Edit this to true to make a default heartbeatstream disabled initially */
+  $heartbeatstream->api_version = 1;
+  $heartbeatstream->class = 'siteactivity';
+  $heartbeatstream->name = 'Site activity';
+  $heartbeatstream->module = 'heartbeat_defaults';
+  $heartbeatstream->title = 'Site activity';
+  $heartbeatstream->path = 'streams/siteactivity.inc';
+  $heartbeatstream->settings = '';
+  $heartbeatstream->variables = array();
+  $heartbeatstreams['siteactivity'] = $heartbeatstream;
+
+  $heartbeatstream = new HeartbeatStreamConfig;
+  $heartbeatstream->disabled = FALSE; /* Edit this to true to make a default heartbeatstream disabled initially */
+  $heartbeatstream->api_version = 1;
+  $heartbeatstream->class = 'relationsactivity';
+  $heartbeatstream->name = 'User relations activity';
+  $heartbeatstream->module = 'heartbeat_defaults';
+  $heartbeatstream->title = 'User relations activity';
+  $heartbeatstream->path = 'streams/relationsactivity.inc';
+  $heartbeatstream->settings = '';
+  $heartbeatstream->variables = array();
+  $heartbeatstreams['relationsactivity'] = $heartbeatstream;
+
+  return $heartbeatstreams;
+
+}
+
+/**
+ * Implements hook_permission().
+ */
+function heartbeat_defaults_permission() {
+  return array(
+    'view user activity' => array(
+      'title' => t('View user profile activity'),
+      'description' => t('View access on a user profile activity in general.')
+    ),
+    'view site activity' => array(
+      'title' => t('View site activity'),
+      'description' => t('View access on the global site activity stream.')
+    ),
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function heartbeat_defaults_ctools_plugin_api($owner, $api) {
+  if ($owner == 'heartbeat' && $api == 'heartbeat') {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implementation of hook_heartbeat_template_info()
+ */
+function heartbeat_defaults_heartbeat_template_info() {
+
+  $heartbeatmessagetemplates = array();
+
+  $heartbeatmessagetemplate = new HeartbeatMessageTemplate;
+  $heartbeatmessagetemplate->disabled = FALSE; /* Edit this to true to make a default heartbeatmessagetemplate disabled initially */
+  $heartbeatmessagetemplate->api_version = 1;
+  $heartbeatmessagetemplate->message_id = 'heartbeat_add_comment';
+  $heartbeatmessagetemplate->description = 'user replied on some content';
+  $heartbeatmessagetemplate->message = '<span>!username replied on !title:</span><blockquote><div>!comment</div></blockquote>';
+  $heartbeatmessagetemplate->message_concat = '%username% replied on !title.';
+  $heartbeatmessagetemplate->perms = 4;
+  $heartbeatmessagetemplate->group_type = 'summary';
+  $heartbeatmessagetemplate->concat_args = array(
+    'group_by' => 'node',
+    'group_target' => 'username',
+    'group_by_target' => 'title',
+    'group_num_max' => '5',
+    'merge_separator' => ', ',
+    'merge_end_separator' => ' and ',
+  );
+  $heartbeatmessagetemplate->variables = array(
+    '!username' => '',
+    '!title' => '',
+    '!comment' => '',
+  );
+  $heartbeatmessagetemplate->attachments = array(
+    'flagattachment' => array(
+      'flags' => array(
+        'like' => 'like',
+      ),
+    ),
+    'flag_count_enabled' => array(
+      'flags' => 0,
+    ),
+    'activitycomments' => array(
+      'enabled' => 0,
+      'activitycomments_node' => 0,
+    ),
+  );
+  $heartbeatmessagetemplates['heartbeat_add_comment'] = $heartbeatmessagetemplate;
+
+  $heartbeatmessagetemplate = new HeartbeatMessageTemplate;
+  $heartbeatmessagetemplate->disabled = FALSE; /* Edit this to true to make a default heartbeatmessagetemplate disabled initially */
+  $heartbeatmessagetemplate->api_version = 1;
+  $heartbeatmessagetemplate->message_id = 'heartbeat_add_node';
+  $heartbeatmessagetemplate->description = 'User adds a node, save user activity';
+  $heartbeatmessagetemplate->message = '!username has added !node_type !node_title.';
+  $heartbeatmessagetemplate->message_concat = '!username has added the following !types: %node_title%.';
+  $heartbeatmessagetemplate->perms = 4;
+  $heartbeatmessagetemplate->group_type = 'summary';
+  $heartbeatmessagetemplate->concat_args = array(
+    'group_by' => 'user',
+    'group_target' => 'node_title',
+    'group_by_target' => 'username',
+    'group_num_max' => '4',
+    'merge_separator' => ',',
+    'merge_end_separator' => 'and',
+  );
+  $heartbeatmessagetemplate->variables = array(
+    '!username' => '',
+    '!node_type' => '',
+    '!node_title' => '',
+    '!types' => '',
+  );
+  $heartbeatmessagetemplate->attachments = array(
+    'flagattachment' => array(
+      'flags' => array(
+        'like' => 'like',
+      ),
+    ),
+    'flag_count_enabled' => array(
+      'flags' => 1,
+    ),
+    'activitycomments' => array(
+      'enabled' => 1,
+      'activitycomments_node' => 1,
+    ),
+  );
+  $heartbeatmessagetemplates['heartbeat_add_node'] = $heartbeatmessagetemplate;
+
+  $heartbeatmessagetemplate = new HeartbeatMessageTemplate;
+  $heartbeatmessagetemplate->disabled = FALSE; /* Edit this to true to make a default heartbeatmessagetemplate disabled initially */
+  $heartbeatmessagetemplate->api_version = 1;
+  $heartbeatmessagetemplate->message_id = 'heartbeat_edit_account';
+  $heartbeatmessagetemplate->description = 'user changed his/her account';
+  $heartbeatmessagetemplate->message = '!username\'s personal account page has been changed.';
+  $heartbeatmessagetemplate->message_concat = 'The personal account page of %username% has been changed.';
+  $heartbeatmessagetemplate->perms = 4;
+  $heartbeatmessagetemplate->group_type = 'summary';
+  $heartbeatmessagetemplate->concat_args = array(
+    'group_by' => 'node',
+    'group_target' => 'username',
+    'group_by_target' => '',
+    'group_num_max' => '4',
+    'merge_separator' => ',',
+    'merge_end_separator' => 'and',
+  );
+  $heartbeatmessagetemplate->variables = array(
+    '!username' => '',
+  );
+  $heartbeatmessagetemplate->attachments = array(
+    'flagattachment' => array(
+      'flags' => array(
+        'like' => 'like',
+      ),
+    ),
+    'flag_count_enabled' => array(
+      'flags' => 1,
+    ),
+    'activitycomments' => array(
+      'enabled' => 1,
+      'activitycomments_node' => 0,
+    ),
+  );
+  $heartbeatmessagetemplates['heartbeat_edit_account'] = $heartbeatmessagetemplate;
+
+  $heartbeatmessagetemplate = new HeartbeatMessageTemplate;
+  $heartbeatmessagetemplate->disabled = FALSE; /* Edit this to true to make a default heartbeatmessagetemplate disabled initially */
+  $heartbeatmessagetemplate->api_version = 1;
+  $heartbeatmessagetemplate->message_id = 'heartbeat_edit_node';
+  $heartbeatmessagetemplate->description = 'When editing a node, log the users activity';
+  $heartbeatmessagetemplate->message = '!username has updated !node_type "!node_title".';
+  $heartbeatmessagetemplate->message_concat = '!username has updated %node_title%.';
+  $heartbeatmessagetemplate->perms = 4;
+  $heartbeatmessagetemplate->group_type = 'summary';
+  $heartbeatmessagetemplate->concat_args = array(
+    'group_by' => 'user',
+    'group_target' => 'node_title',
+    'group_by_target' => 'username',
+    'group_num_max' => '4',
+    'merge_separator' => ',',
+    'merge_end_separator' => 'and',
+  );
+  $heartbeatmessagetemplate->variables = array(
+    '!username' => '',
+    '!node_type' => '',
+    '!node_title' => '',
+  );
+  $heartbeatmessagetemplate->attachments = array(
+    'flagattachment' => array(
+      'flags' => array(
+        'like' => 'like',
+      ),
+    ),
+    'flag_count_enabled' => array(
+      'flags' => 1,
+    ),
+    'activitycomments' => array(
+      'enabled' => 0,
+      'activitycomments_node' => 0,
+    ),
+  );
+  $heartbeatmessagetemplates['heartbeat_edit_node'] = $heartbeatmessagetemplate;
+
+  return $heartbeatmessagetemplates;
+
+}
+
+/**
+ * Implements hook_heartbeat_related_uids().
+ */
+function heartbeat_defaults_heartbeat_related_uids($uid) {
+
+  $uids = array();
+
+  if (module_exists('flag_friend')) {
+    foreach (flag_friend_get_friends($uid) as $account) {
+      $uids[$account->uid] = $account->uid;
+    }
+  }
+
+  if (module_exists('user_relationships')) {
+    $result = user_relationships_load(array('user' => $uid, 'approved' => 1), array('include_twoway_reverse' => 1));
+    foreach ($result as $account) {
+      $uids[$account->requester_id] = $account->requester_id;
+    }
+  }
+
+  return $uids;
+
+}

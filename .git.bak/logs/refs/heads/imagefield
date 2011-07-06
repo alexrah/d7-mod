@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309678751 +0200	branch: Created from master
+8ca157452273878a77591ac3ebe9746adfa964d6 5b6e8fc3a87a4bb2ce477a38016fa7124778124d ale <ale@MacPro.local> 1309681875 +0200	commit: Patched image field
+5b6e8fc3a87a4bb2ce477a38016fa7124778124d a1a4e90b934a440d5ceb16724cc9af340e1607e9 ale <ale@MacPro.local> 1309682067 +0200	commit: Added backup files and patch backup
+a1a4e90b934a440d5ceb16724cc9af340e1607e9 1bd3bfc84c14861a774a3cf6f9d90b98436ddc4b ale <ale@MacPro.local> 1309682130 +0200	commit (amend): Added backup files and patch backup

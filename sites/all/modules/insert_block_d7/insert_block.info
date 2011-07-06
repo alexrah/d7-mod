@@ -1,0 +1,6 @@
+name = Insert Block
+description = "Inserts the contents of a block into into a node using [block:module=delta] tags"
+core = 7.x
+
+files[] = insert_block.module
+files[] = insert_block.install

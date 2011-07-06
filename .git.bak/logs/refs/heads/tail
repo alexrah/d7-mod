@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 8ca157452273878a77591ac3ebe9746adfa964d6 ale <ale@MacPro.local> 1309849957 +0200	branch: Created from 8ca157452273878a77591ac3ebe9746adfa964d6
+8ca157452273878a77591ac3ebe9746adfa964d6 f291adb71940f4c21a8d00224f6e48bdd0247914 ale <ale@MacPro.local> 1309849995 +0200	commit: On branch tail
+f291adb71940f4c21a8d00224f6e48bdd0247914 c3a2d763d0c2ca5b33bbd2a57ad2e61c92877136 ale <ale@MacPro.local> 1309850210 +0200	rebase -i (finish): refs/heads/tail onto a58c391
+c3a2d763d0c2ca5b33bbd2a57ad2e61c92877136 c16a52aa3498fc01275e149aac09c70d6541dbd0 System Administrator <root@MacPro.local> 1309850530 +0200	rebase -i (finish): refs/heads/tail onto 9051907
+c16a52aa3498fc01275e149aac09c70d6541dbd0 7e9fb068b6c48140c6c56bf66272a755a910b5d7 System Administrator <root@MacPro.local> 1309850656 +0200	rebase -i (finish): refs/heads/tail onto 8ca1574
+7e9fb068b6c48140c6c56bf66272a755a910b5d7 df800af4af444e6a0d052adcc71cb64eb0521a28 ale <ale@MacPro.local> 1309910351 +0200	rebase -i (finish): refs/heads/tail onto 8ca1574
