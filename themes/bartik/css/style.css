@@ -37,7 +37,6 @@ h2 {
 }
 p {
   margin: 0 0 1.2em;
-  text-align: justify;
 }
 del {
   text-decoration: line-through;
@@ -636,7 +635,7 @@ h1#page-title {
 }
 .field-type-taxonomy-term-reference .field-label,
 .field-type-taxonomy-term-reference ul.links {
-  font-size: 1em;
+  font-size: 0.8em;
 }
 .node-teaser .field-type-taxonomy-term-reference .field-label,
 .node-teaser .field-type-taxonomy-term-reference ul.links {
@@ -661,7 +660,7 @@ h1#page-title {
 }
 ul.links {
   color: #68696b;
-  font-size: large;
+  font-size: 0.821em;
 }
 .node-unpublished {
   margin: -20px -15px 0;
@@ -1589,7 +1588,6 @@ div.admin-panel .description {
 .overlay #page {
   padding: 0 2em;
 }
-.overlay #skip-link,
 .overlay .region-page-top,
 .overlay #header,
 .overlay #page-title,
